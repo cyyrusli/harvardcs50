@@ -1,11 +1,11 @@
 # CS50: Introduction to Computer Science
-Harvard CS50 Problem Sets
+2017 Harvard CS50 Problem Sets (CSCI E-50)
 
 Problem Set 0: https://scratch.mit.edu/projects/143733686
 
 Problem Set 1: https://github.com/cyyrusli/harvardcs50/tree/master/PSet1
 
-Problem Set 2: -
+Problem Set 2: https://github.com/cyyrusli/harvardcs50/tree/master/PSet2
 
 Problem Set 3: -
 
