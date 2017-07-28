@@ -13,7 +13,7 @@ int main(void){
     
     do 
     {
-        printf("How much change is owed?\n ");
+        printf("Change: ");
         input = get_float();
         if(input == 0 || input <= 0){
             printf("Input should be greater than 0\n");
@@ -34,6 +34,6 @@ int main(void){
     
     coins = quarter + dime + nickel + remainder;
     
-    printf("Number of coins: %d\n", coins);
+    printf("%d\n", coins);
 
 }
