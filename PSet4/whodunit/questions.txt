@@ -1,0 +1,41 @@
+1.  What’s stdint.h?
+A header file in the C library that provides a set of typedefs that specify exact-width integer types, together with the defined minimum and amximum allowable values for each type, using macros.
+
+2.  What’s the point of using uint8_t, uint32_t, int32_t, and uint16_t in a program?
+It is to allow us to fill up exactly the amount of space we need.
+
+3.  How many bytes is a BYTE, a DWORD, a LONG, and a WORD, respectively?
+BYTE = 1 byte
+DWORD = 4 bytes
+LONG = 4 bytes
+WORD = 2 bytes
+
+4.  What (in ASCII, decimal, or hexadecimal) must the first two bytes of any BMP file be? Leading bytes used to identify file formats (with high probability) are generally called "magic numbers."
+ASCII = BM
+Hexadecimal 0x424d
+
+5.  What’s the difference between bfSize and biSize?
+bfSize is the total number of bytes in the file.
+biSize is the total number of bytes in the info header.
+
+6.  What does it mean if biHeight is negative?
+It means that the bitmap is top-down with the origin at the upper left corner.
+
+7.  What field in BITMAPINFOHEADER specifies the BMP’s color depth (i.e., bits per pixel)?
+biBitCount.
+
+8.  Why might fopen return NULL in lines 24 and 32 of copy.c?
+fopen will return NULL if the file specified does not exist.
+
+9.  Why is the third argument to fread always 1 in our code?
+It specifies the number of elements we want to read.
+
+10. What value does line 65 of copy.c assign to padding if bi.biWidth is 3?
+3.
+
+11. What does fseek do?
+fseek is used to set the file position indicator for the stream to a new position.
+
+12. What is SEEK_CUR?
+SEEK_CUR specifies that an offset is a count of characters from the beginning of the file in an whence argument.
+
