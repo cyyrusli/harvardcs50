@@ -1,0 +1,23 @@
+0.  What is pneumonoultramicroscopicsilicovolcanoconiosis?
+This word refers to a lung disease caused by inhaling very fine ash and sand dust.
+
+1.  According to its man page, what does getrusage do?
+getrusage provide measures of the resources used by the current process or its terminated and waited-for child processes.
+
+2.  Per that same man page, how many members are in a variable of type struct rusage?
+16 members.
+
+3.  Why do you think we pass before and after by reference (instead of by value) to calculate, even though we’re not changing their contents?
+Passing large structs by value is slow and uses alot of memory, and may potentially cause a stack overflow because copies of the structs will get placed in the stack when passing or returning values.
+
+4.  Explain as precisely as possible, in a paragraph or more, how main goes about reading words from a file. In other words, convince us that you indeed understand how that function’s for loop works.
+The key function in the for loop is the c = fgetc(fp) function call. fgetsc gets the next unsigned char from fp and moves the position indicator in fp until it reaches the end of file (EOF). As each char is received, it is undergoes the logical sequence of if(if), elseif, elseif.
+If the char is an alphabet or an apostrophe that is not at index 0 of the word, the char is appended to the word array. Elseif the char is a number, the word is ignored and the program skips to the next word that is after a whitespace. Elseif a whitespace or punctuation is found,
+it means the program has found a word and it terminates the word by adding a \0 to the array.
+
+5.  Why do you think we used fgetc to read each word’s characters one at a time rather than use fscanf with a format string like "%s" to read whole words at a time? Put another way, what problems might arise by relying on fscanf alone?
+fscanf with a formats string like "%s" will read characters until a whitespace is found. If the text ends with a punctuation, the program will view it as part of the word and may mess up the reading procedure.
+
+6.  Why do you think we declared the parameters for check and load as const (which means "constant")?
+To prevent changes from being made to the parameters.
+
