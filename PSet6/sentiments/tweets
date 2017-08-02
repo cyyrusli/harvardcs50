@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+import os
+import sys
+import helpers
+from analyzer import Analyzer
+from termcolor import colored
+
+def main():
+    
+    # ensure proper usage
+    if len(sys.argv) != 2:
+        sys.exit('Usage: ./tweets @screen_name')
+        
+    # absolute path to lists
+    positives = os.path.join(sys.path[0], "positive-words.txt")
+    negatives = os.path.join(sys.path[0], "negative-words.txt")
+    
+    # initialize analyzer
+    analyzer = Analyzer(positives, negatives)
+    
+    # get username from argv
+    screen_name = sys.argv[1].strip('@')
+    
+    # get user's tweets using the API
+    tweets = helpers.get_user_timeline(screen_name, 100)
+    
+    if tweets == None:
+        sys.exit("'User's account is private or does not exists")
+        
+    for tweet in tweets:
+        score = analyzer.analyze(tweet)
+        if score > 0:
+            print(colored("{} {}".format(score, tweet), 'green'))
+        elif score < 0:
+            print(colored("{} {}".format(score, tweet), 'red'))
+        else:
+            print(colored("{} {}".format(score, tweet), 'yellow'))
+            
+if __name__ == '__main__':
+    main()
+    
+# TODO
+# tokenize tweet; TweetTokenizer to split a tweet into a list of words
+# iterate over token and rate if positive or negative (1, 0, -1)
+# initialize Analyzer
+# analyze tweets
