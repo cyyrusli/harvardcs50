@@ -15,7 +15,7 @@ Problem Set 5: https://github.com/cyyrusli/harvardcs50/tree/master/PSet5
 
 Problem Set 6: https://github.com/cyyrusli/harvardcs50/tree/master/PSet6
 
-Problem Set 7: -
+Problem Set 7: https://github.com/cyyrusli/harvardcs50/tree/master/PSet7
 
 Problem Set 8: -
 
