@@ -21,4 +21,4 @@ Problem Set 7: https://github.com/cyyrusli/harvardcs50/tree/master/PSet7
 
 Problem Set 8: https://github.com/cyyrusli/harvardcs50/tree/master/PSet8
 
-Final Project: -
+Final Project: - https://youtu.be/DkpiXl6og-c
